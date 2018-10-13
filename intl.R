@@ -5,7 +5,6 @@ non_numeric_indices <- which(is.na(as.numeric(dirtivore_df$rMax))) # may be help
 non_numeric_indices # inspect which objects do not convert cleanly to numeric class
 unique(gsub("\\d+\\.\\d+","", dirtivore_df$rMax[non_numeric_indices]))
 
-dirtivore_df
 str(dirtivore_df)
 names(dirtivore_df)
 
@@ -18,3 +17,5 @@ dirtivore_df
 str(dirtivore_df)
 str(dirtivore_df)
 
+plot(log(dirtivore_df$MassKG),log(dirtivore_df$rMax))
+abline(lm(log(dirtivore_df$rMax)~log(dirtivore_df$MassKG)))
