@@ -11,5 +11,7 @@ non_numeric_2
 dirtivore_df$rMax<-as.numeric(dirtivore_df$rMax)
 dirtivore_df$MassKG<-as.numeric(dirtivore_df$MassKG)
 
-plot(log(dirtivore_df$MassKG),log(dirtivore_df$rMax))
-abline(lm(log(dirtivore_df$rMax)~log(dirtivore_df$MassKG)))
+plot(log10(dirtivore_df$MassKG),log10(dirtivore_df$rMax))
+abline(lm(log10(dirtivore_df$rMax)~log10(dirtivore_df$MassKG)))
+
+library(ggplot2)
