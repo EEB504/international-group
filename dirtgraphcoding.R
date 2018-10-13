@@ -15,3 +15,4 @@ plot(log10(dirtivore_df$MassKG),log10(dirtivore_df$rMax))
 abline(lm(log10(dirtivore_df$rMax)~log10(dirtivore_df$MassKG)))
 
 library(ggplot2)
+####hi!!!!
